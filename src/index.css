@@ -1,0 +1,148 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-serif: 'Cormorant Garamond', Georgia, serif;
+    --font-display: 'Cinzel', serif;
+    --font-script: 'Alex Brush', cursive;
+    --font-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
+
+    /* Palette */
+    --ivory-base: #FAF7F2;
+    --ivory-card: #FFFFFF;
+    --ivory-muted: #F2EDE4;
+    --gold-deep: #916B27;
+    --gold-primary: #B88E3E;
+    --gold-bright: #D8B570;
+    --gold-light: #F4E8D1;
+    --gold-shimmer: #EEDB9A;
+    --maroon-royal: #5E121B;
+    --maroon-dark: #3F0A10;
+    --ink-charcoal: #2A241F;
+    --ink-muted: #6B6258;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    font-family: var(--font-sans);
+    background-color: var(--ivory-base);
+    color: var(--ink-charcoal);
+  }
+}
+
+/* Custom font utility classes */
+.font-serif-cormorant {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+}
+
+.font-display-cinzel {
+  font-family: 'Cinzel', serif;
+}
+
+.font-script-alex {
+  font-family: 'Alex Brush', cursive;
+}
+
+.font-sans-clean {
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+}
+
+/* Gold text gradient effect */
+.text-gold-gradient {
+  background: linear-gradient(135deg, #7A5517 0%, #B88E3E 35%, #F0D597 55%, #B88E3E 75%, #7A5517 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gold-light-gradient {
+  background: linear-gradient(135deg, #A88134 0%, #D8B570 45%, #FFF0CD 60%, #C49B4B 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Gold borders & lines */
+.border-gold-subtle {
+  border-color: rgba(184, 142, 62, 0.28);
+}
+
+.border-gold-medium {
+  border-color: rgba(184, 142, 62, 0.5);
+}
+
+.bg-gold-subtle {
+  background-color: rgba(184, 142, 62, 0.06);
+}
+
+/* Luxury card shadow */
+.shadow-luxury {
+  box-shadow: 0 10px 30px -10px rgba(58, 42, 26, 0.08), 0 20px 40px -15px rgba(184, 142, 62, 0.07);
+}
+
+.shadow-wax {
+  box-shadow: 0 8px 24px -4px rgba(63, 10, 16, 0.5), 0 2px 6px 0 rgba(0, 0, 0, 0.2), inset 0 2px 3px rgba(255, 255, 255, 0.35);
+}
+
+/* 3D Envelope perspective */
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.transform-style-3d {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+}
+
+/* Soft paper texture background overlay */
+.paper-texture {
+  background-color: #FAF7F2;
+  background-image: 
+    radial-gradient(#C5A059 0.75px, transparent 0.75px),
+    radial-gradient(#FAF7F2 0.75px, #FAF7F2 0.75px);
+  background-size: 30px 30px;
+  background-position: 0 0, 15px 15px;
+  background-color: #FAF7F2;
+}
+
+/* Wax seal gentle breathing animation */
+@keyframes sealPulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 8px 25px -4px rgba(94, 18, 27, 0.45), 0 0 0 0 rgba(216, 181, 112, 0.4);
+  }
+  50% {
+    transform: scale(1.04);
+    box-shadow: 0 12px 32px -4px rgba(94, 18, 27, 0.6), 0 0 0 10px rgba(216, 181, 112, 0);
+  }
+}
+
+.animate-seal-pulse {
+  animation: sealPulse 2.8s ease-in-out infinite;
+}
+
+/* Gold shimmer border animation */
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.animate-shimmer {
+  background: linear-gradient(90deg, rgba(216,181,112,0.1) 0%, rgba(216,181,112,0.6) 50%, rgba(216,181,112,0.1) 100%);
+  background-size: 200% 100%;
+  animation: shimmer 4s infinite linear;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
