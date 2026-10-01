@@ -53,8 +53,8 @@ export const ASSETS = {
   },
 
   // Background Wedding Music URL (Works on GitHub Pages, Vercel, Local, etc.)
-  backgroundMusic: `${cleanBase}audio/wedding_music.mp3`,
-  backgroundMusicWav: `${cleanBase}audio/wedding_music.wav`,
+  backgroundMusic: `${cleanBase}audio/aud.mp3`,
+  backgroundMusicWav: `${cleanBase}audio/aud.wav`,
   
   // Track details shown in the floating player tooltip
   musicTitle: 'Priyanshu & Rupal Wedding Theme',
